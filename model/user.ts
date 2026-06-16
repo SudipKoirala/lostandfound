@@ -15,21 +15,25 @@ const UserSchema  = new Schema<IUser>({
     userName:{
         type: String,
         require: true,
-        unique:true
+        unique:true,
+        trim: true
     },
     firstName:{
         type: String,
         require: true,
+        trim: true
     },
     lastName:{
         type: String,
         require: true,
+        trim: true
        
     },
     password:{
         type: String,
         require: true,
-        minlength: 6
+        minlength: 6,
+        trim: true
         
     },
 })
