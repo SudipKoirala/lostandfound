@@ -15,6 +15,7 @@ export const POST = async (req: NextRequest)=>{
         }, {status: 400})
     }
 
+    const existingUser = await User.findOne()
 
     const user = await User.create({
         firstName, lastName, userName, password
